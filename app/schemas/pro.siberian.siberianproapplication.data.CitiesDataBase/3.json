@@ -1,0 +1,75 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 3,
+    "identityHash": "448fb6521df0871dd0766bc55351bba7",
+    "entities": [
+      {
+        "tableName": "Cities",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `city` TEXT, `temp` REAL, `temp_max` INTEGER, `temp_min` INTEGER, `pressure` INTEGER, `humidity` INTEGER, `forecast` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mCity",
+            "columnName": "city",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mWeather.mTemperature",
+            "columnName": "temp",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mWeather.mMaxTemperature",
+            "columnName": "temp_max",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mWeather.mMinTemperature",
+            "columnName": "temp_min",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mWeather.mPressure",
+            "columnName": "pressure",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mWeather.mHumidity",
+            "columnName": "humidity",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mWeatherForecast.mForecast",
+            "columnName": "forecast",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"448fb6521df0871dd0766bc55351bba7\")"
+    ]
+  }
+}

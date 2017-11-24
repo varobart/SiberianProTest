@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/primary_text_description"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        style="@style/PrimaryTextStyle"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/subtext_description"
+        android:layout_below="@+id/primary_text_description"
+        android:layout_alignParentLeft="true"
+        style="@style/SubtextStyle"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/temp_description"
+        android:textSize="56sp"
+        android:layout_below="@+id/subtext_description"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="@dimen/primary_text_left_padding"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pressure_description"
+        android:layout_below="@+id/temp_description"
+        android:layout_alignParentLeft="true"
+        android:drawableLeft="@drawable/pressure_icon"
+        android:paddingLeft="@dimen/primary_text_left_padding"
+        android:gravity="center_vertical"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/humidity_description"
+        android:layout_below="@+id/pressure_description"
+        android:layout_alignParentLeft="true"
+        android:drawableLeft="@drawable/humidity_icon"
+        android:paddingLeft="@dimen/primary_text_left_padding"
+        android:gravity="center_vertical"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/humidity_description"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical"
+        android:divider="@drawable/divider"
+        android:showDividers="beginning"
+        android:paddingTop="@dimen/subtext_bottom_padding">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/description_rv">
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weather_icon"
+        android:layout_below="@+id/subtext_description"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/primary_text_right_padding"/>
+
+
+
+
+
+</RelativeLayout>

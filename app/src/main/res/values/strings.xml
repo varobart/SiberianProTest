@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SiberianProApplication</string>
+    <string name="edit_text_hint">city</string>
+    <string name="dialog_title">Input city!</string>
+    <string name="OK">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="list_title">CITIES</string>
+    <string name="description_title">FORECAST</string>
+</resources>

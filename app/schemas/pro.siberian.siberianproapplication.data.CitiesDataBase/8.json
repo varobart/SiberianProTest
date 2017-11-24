@@ -1,0 +1,111 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 8,
+    "identityHash": "afea7ed764ec1150f9096d049685a549",
+    "entities": [
+      {
+        "tableName": "Cities",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `city` TEXT, `day` INTEGER NOT NULL, `month` TEXT, `temp` REAL, `temp_max` INTEGER, `temp_min` INTEGER, `pressure` INTEGER, `humidity` INTEGER, `icon` TEXT, `forecast` TEXT, `days` TEXT, `months` TEXT, `times` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mCity",
+            "columnName": "city",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mDay",
+            "columnName": "day",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mMonth",
+            "columnName": "month",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mWeather.mTemperature",
+            "columnName": "temp",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mWeather.mMaxTemperature",
+            "columnName": "temp_max",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mWeather.mMinTemperature",
+            "columnName": "temp_min",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mWeather.mPressure",
+            "columnName": "pressure",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mWeather.mHumidity",
+            "columnName": "humidity",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mWeather.mIcon",
+            "columnName": "icon",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mWeatherForecast.mForecast",
+            "columnName": "forecast",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mWeatherForecast.mDays",
+            "columnName": "days",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mWeatherForecast.mMonths",
+            "columnName": "months",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mWeatherForecast.mTimes",
+            "columnName": "times",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"afea7ed764ec1150f9096d049685a549\")"
+    ]
+  }
+}
